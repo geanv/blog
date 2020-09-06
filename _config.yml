@@ -1,7 +1,6 @@
 title: GJ/365
 author:
   name: GJ
-  email: gj3656@live.com
 description: > # this means to ignore newlines until "show_excerpts:"
   记录与分享
 
@@ -21,7 +20,7 @@ minima:
     github:  geanv
     # devto: jekyll
     # dribbble: jekyll
-    # facebook: jekyll
+    facebook: geanv
     # flickr:   jekyll
     # instagram: jekyll
     linkedin: geanv
@@ -66,3 +65,6 @@ plugins:
 
 # Pagination 
 paginate: 5
+
+disqus:
+  shortname: geanv
