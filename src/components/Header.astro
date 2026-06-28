@@ -12,9 +12,9 @@ const navLinks = [
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-gray-200 dark:border-slate-700">
+<header class="sticky top-0 z-50 backdrop-blur-xl bg-white/70 dark:bg-[#0a0a0b]/80 border-b border-gray-200/80 dark:border-zinc-800">
   <nav class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href={base} class="flex items-center gap-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary-dark transition-colors">
+    <a href={base} class="flex items-center gap-2 text-xl font-bold tracking-tight text-gray-900 dark:text-zinc-100 hover:text-primary dark:hover:text-primary-dark transition-colors">
       <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="32" height="32" rx="8" fill="url(#logo-grad)"/>
         <defs><linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
@@ -31,8 +31,8 @@ const currentPath = Astro.url.pathname;
           class:list={[
             'px-3 py-2 rounded-lg text-sm font-medium transition-colors',
             currentPath === link.href || (link.href !== base && currentPath.startsWith(link.href))
-              ? 'bg-primary/10 text-primary dark:text-primary-dark'
-              : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+              ? 'bg-primary/10 text-primary dark:bg-primary-dark/10 dark:text-primary-dark'
+              : 'text-gray-600 dark:text-zinc-400 hover:text-gray-900 dark:hover:text-zinc-200 hover:bg-gray-100 dark:hover:bg-zinc-800'
           ]}
         >
           {link.label}
@@ -49,7 +49,7 @@ const currentPath = Astro.url.pathname;
       <button
         id="mobile-menu-btn"
         type="button"
-        class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+        class="p-2 rounded-lg text-gray-600 dark:text-zinc-400 hover:bg-gray-100 dark:hover:bg-zinc-800"
         aria-label="Open menu"
       >
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -60,7 +60,7 @@ const currentPath = Astro.url.pathname;
   </nav>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900">
+  <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-200 dark:border-zinc-800 bg-white dark:bg-[#0a0a0b]">
     <div class="px-6 py-3 space-y-1">
       {navLinks.map(link => (
         <a
@@ -68,8 +68,8 @@ const currentPath = Astro.url.pathname;
           class:list={[
             'block px-3 py-2 rounded-lg text-sm font-medium transition-colors',
             currentPath === link.href || (link.href !== base && currentPath.startsWith(link.href))
-              ? 'bg-primary/10 text-primary dark:text-primary-dark'
-              : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+              ? 'bg-primary/10 text-primary dark:bg-primary-dark/10 dark:text-primary-dark'
+              : 'text-gray-600 dark:text-zinc-400 hover:text-gray-900 dark:hover:text-zinc-200 hover:bg-gray-100 dark:hover:bg-zinc-800'
           ]}
         >
           {link.label}

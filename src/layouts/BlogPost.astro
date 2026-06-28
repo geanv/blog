@@ -16,14 +16,14 @@ const base = import.meta.env.BASE_URL;
 <BaseLayout title={title} description={description}>
   <article class="max-w-4xl mx-auto px-6 py-12">
     <header class="mb-10">
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white leading-tight">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-zinc-50 leading-tight">
         {title}
       </h1>
-      <div class="mt-4 flex flex-wrap items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
+      <div class="mt-4 flex flex-wrap items-center gap-3 text-sm text-gray-500 dark:text-zinc-500">
         <time datetime={date.toISOString()}>{formattedDate}</time>
         {tags.length > 0 && (
           <>
-            <span>·</span>
+            <span class="dark:text-zinc-700">·</span>
             <div class="flex flex-wrap gap-2">
               {tags.map(tag => (
                 <span class="tag">{tag}</span>
@@ -39,8 +39,8 @@ const base = import.meta.env.BASE_URL;
     </div>
 
     <!-- Back link -->
-    <div class="mt-16 pt-8 border-t border-gray-200 dark:border-slate-700">
-      <a href={`${base}posts`} class="inline-flex items-center gap-2 text-primary dark:text-primary-dark hover:text-primary-dark transition-colors text-sm font-medium">
+    <div class="mt-16 pt-8 border-t border-gray-200 dark:border-zinc-800">
+      <a href={`${base}posts`} class="inline-flex items-center gap-2 text-primary dark:text-primary-dark hover:text-primary-dark dark:hover:text-[#a5b4fc] transition-colors text-sm font-medium">
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg>
