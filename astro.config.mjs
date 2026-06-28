@@ -3,7 +3,8 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://www.x-1.me',
+  site: 'https://geanv.github.io',
+  base: '/blog/',
   vite: {
     plugins: [tailwindcss()],
   },

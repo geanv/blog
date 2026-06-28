@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.x-1.me/sitemap-index.xml
+Sitemap: https://geanv.github.io/blog/sitemap-index.xml
