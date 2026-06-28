@@ -10,6 +10,7 @@ interface Props {
 
 const { title, date, description = '', tags = [] } = Astro.props;
 const formattedDate = date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' });
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title={title} description={description}>
@@ -39,7 +40,7 @@ const formattedDate = date.toLocaleDateString('zh-CN', { year: 'numeric', month:
 
     <!-- Back link -->
     <div class="mt-16 pt-8 border-t border-gray-200 dark:border-slate-700">
-      <a href="/blog" class="inline-flex items-center gap-2 text-primary dark:text-primary-dark hover:text-primary-dark transition-colors text-sm font-medium">
+      <a href={`${base}posts`} class="inline-flex items-center gap-2 text-primary dark:text-primary-dark hover:text-primary-dark transition-colors text-sm font-medium">
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
         </svg>

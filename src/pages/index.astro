@@ -7,6 +7,7 @@ const allPosts = await getCollection('blog', ({ data }) => data.draft !== true);
 const recentPosts = allPosts
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 4);
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Guo Jian" description="Guo Jian 的个人博客 - 记录思考与创作">
@@ -32,13 +33,13 @@ const recentPosts = allPosts
 
       <!-- Quick links -->
       <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="/blog" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-white font-medium hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20">
+        <a href={`${base}posts`} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-white font-medium hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20">
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
           </svg>
           阅读文章
         </a>
-        <a href="/about" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-gray-300 font-medium hover:border-primary hover:text-primary dark:hover:text-primary-dark transition-colors">
+        <a href={`${base}about`} class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-gray-300 font-medium hover:border-primary hover:text-primary dark:hover:text-primary-dark transition-colors">
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
           </svg>
@@ -53,7 +54,7 @@ const recentPosts = allPosts
     <section class="max-w-4xl mx-auto px-6 pb-16">
       <div class="flex items-center justify-between mb-6">
         <h2 class="text-2xl font-bold text-gray-900 dark:text-white">最近文章</h2>
-        <a href="/blog" class="text-sm text-primary dark:text-primary-dark hover:text-primary-dark font-medium flex items-center gap-1">
+        <a href={`${base}posts`} class="text-sm text-primary dark:text-primary-dark hover:text-primary-dark font-medium flex items-center gap-1">
           查看全部
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />

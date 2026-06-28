@@ -9,10 +9,11 @@ interface Props {
 
 const { title, description, date, slug, tags = [] } = Astro.props;
 const formattedDate = date.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' });
+const base = import.meta.env.BASE_URL;
 ---
 
 <article class="group">
-  <a href={`/blog/${slug}`} class="block p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 hover:border-primary/40 dark:hover:border-primary-dark/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
+  <a href={`${base}posts/${slug}`} class="block p-6 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 hover:border-primary/40 dark:hover:border-primary-dark/40 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
     <time datetime={date.toISOString()} class="text-sm text-gray-500 dark:text-gray-400">
       {formattedDate}
     </time>

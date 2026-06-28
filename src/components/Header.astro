@@ -1,10 +1,12 @@
 ---
 import ThemeToggle from './ThemeToggle.astro';
 
+const base = import.meta.env.BASE_URL;
+
 const navLinks = [
-  { href: '/', label: '首页' },
-  { href: '/blog', label: '文章' },
-  { href: '/about', label: '关于' },
+  { href: base, label: '首页' },
+  { href: `${base}posts`, label: '文章' },
+  { href: `${base}about`, label: '关于' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -12,7 +14,7 @@ const currentPath = Astro.url.pathname;
 
 <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-gray-200 dark:border-slate-700">
   <nav class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="/" class="flex items-center gap-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary-dark transition-colors">
+    <a href={base} class="flex items-center gap-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white hover:text-primary dark:hover:text-primary-dark transition-colors">
       <svg class="w-8 h-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="32" height="32" rx="8" fill="url(#logo-grad)"/>
         <defs><linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
@@ -28,7 +30,7 @@ const currentPath = Astro.url.pathname;
           href={link.href}
           class:list={[
             'px-3 py-2 rounded-lg text-sm font-medium transition-colors',
-            currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
+            currentPath === link.href || (link.href !== base && currentPath.startsWith(link.href))
               ? 'bg-primary/10 text-primary dark:text-primary-dark'
               : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
           ]}
@@ -65,7 +67,7 @@ const currentPath = Astro.url.pathname;
           href={link.href}
           class:list={[
             'block px-3 py-2 rounded-lg text-sm font-medium transition-colors',
-            currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
+            currentPath === link.href || (link.href !== base && currentPath.startsWith(link.href))
               ? 'bg-primary/10 text-primary dark:text-primary-dark'
               : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
           ]}

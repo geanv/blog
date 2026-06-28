@@ -11,6 +11,7 @@ interface Props {
 
 const { title, description = 'Guo Jian 的个人博客 - 记录思考与创作', ogImage } = Astro.props;
 const siteTitle = title === 'Guo Jian' ? title : `${title} · Guo Jian`;
+const base = import.meta.env.BASE_URL;
 ---
 
 <!DOCTYPE html>
@@ -29,7 +30,7 @@ const siteTitle = title === 'Guo Jian' ? title : `${title} · Guo Jian`;
     {ogImage && <meta property="og:image" content={ogImage} />}
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
