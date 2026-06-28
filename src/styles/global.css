@@ -97,6 +97,11 @@ html.dark .prose pre {
   background-color: #141416;
   border-color: #27272a;
 }
+html.dark .prose pre.astro-code {
+  background-color: #141416 !important;
+  border: 1px solid #27272a;
+  border-radius: 0.5rem;
+}
 
 .prose pre code {
   padding: 0;
@@ -105,6 +110,42 @@ html.dark .prose pre {
 
 .prose ul, .prose ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
 .prose li { margin-bottom: 0.5rem; }
+html.dark .prose li { color: #d4d4d8; }
+html.dark .prose li::marker { color: #71717a; }
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--color-border-light);
+  margin: 2rem 0;
+}
+html.dark .prose hr { border-top-color: var(--color-border-dark); }
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.9em;
+}
+.prose th, .prose td {
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border-light);
+}
+.prose th {
+  font-weight: 600;
+  background-color: #f8fafc;
+  color: var(--color-text-light);
+}
+.prose td { color: var(--color-text-light); }
+html.dark .prose th, html.dark .prose td {
+  border-bottom-color: var(--color-border-dark);
+}
+html.dark .prose th {
+  background-color: #1c1c1f;
+  color: #d4d4d8;
+}
+html.dark .prose td { color: #a1a1aa; }
+
 .prose blockquote {
   border-left: 4px solid var(--color-primary);
   padding-left: 1rem;
