@@ -12,7 +12,7 @@
   --color-text-light: #1e293b;
   --color-text-dark: #e4e4e7;
   --color-muted-light: #64748b;
-  --color-muted-dark: #8b8b96;
+  --color-muted-dark: #71717a;
   --color-border-light: #e2e8f0;
   --color-border-dark: #27272a;
   --color-border-subtle-dark: #1e1e21;
@@ -59,10 +59,10 @@ html:not(.dark) .prose {
 
 html.dark .prose h1 { color: #fafafa; }
 html.dark .prose h2 { border-bottom-color: var(--color-border-dark); color: #fafafa; }
-html.dark .prose h3 { color: #e4e4e7; }
-html.dark .prose p { color: #c4c4ca; }
+html.dark .prose h3 { color: #fafafa; }
+html.dark .prose p { color: #d4d4d8; }
 html.dark .prose strong { color: #e4e4e7; }
-html.dark .prose em { color: #b4b4bc; }
+html.dark .prose em { color: #d4d4d8; }
 
 .prose p { margin-bottom: 1.25rem; }
 .prose a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
