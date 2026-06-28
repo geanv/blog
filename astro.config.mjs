@@ -4,7 +4,6 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://geanv.github.io',
-  base: '/blog/',
   vite: {
     plugins: [tailwindcss()],
   },
