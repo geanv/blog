@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #6366f1;
-  --color-primary-dark: #818cf8;
+  --color-primary: #07C160;
+  --color-primary-dark: #2DC770;
   --color-accent: #f59e0b;
   --color-bg-light: #fafafa;
   --color-bg-dark: #0a0a0b;
@@ -69,7 +69,7 @@ html.dark .prose em { color: #d4d4d8; }
 .prose a:hover { color: var(--color-primary-dark); }
 
 html.dark .prose a { color: var(--color-primary-dark); }
-html.dark .prose a:hover { color: #a5b4fc; }
+html.dark .prose a:hover { color: #4AD886; }
 
 .prose code {
   font-family: var(--font-mono);
@@ -124,14 +124,14 @@ html.dark .prose blockquote { color: var(--color-muted-dark); border-left-color:
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 500;
-  background-color: #e0e7ff;
-  color: #4338ca;
+  background-color: #e6f9ed;
+  color: #06863E;
 }
 
 html.dark .tag {
-  background-color: rgba(129, 140, 248, 0.12);
-  color: #a5b4fc;
-  border: 1px solid rgba(129, 140, 248, 0.18);
+  background-color: rgba(7, 193, 96, 0.12);
+  color: #4AD886;
+  border: 1px solid rgba(7, 193, 96, 0.18);
 }
 
 /* Scrollbar */
@@ -142,10 +142,10 @@ html.dark ::-webkit-scrollbar-thumb { background: #3f3f46; }
 
 /* Selection */
 ::selection {
-  background-color: rgba(99, 102, 241, 0.2);
+  background-color: rgba(7, 193, 96, 0.2);
   color: inherit;
 }
 
 html.dark ::selection {
-  background-color: rgba(129, 140, 248, 0.25);
+  background-color: rgba(45, 199, 112, 0.25);
 }
