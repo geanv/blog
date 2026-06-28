@@ -8,7 +8,7 @@ export async function GET(context) {
 
   return rss({
     title: 'Guo Jian',
-    description: 'Guo Jian 的个人博客 - 记录思考与创作',
+    description: 'Guo Jian — Software Engineer & Researcher. Thoughts on cloud, networking, and code.',
     site: context.site,
     items: sortedPosts.map((post) => ({
       title: post.data.title,
