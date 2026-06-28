@@ -3,9 +3,8 @@
 ---
 
 <button
-  id="theme-toggle"
   type="button"
-  class="relative p-2 rounded-lg transition-colors hover:bg-gray-100 dark:hover:bg-zinc-800"
+  class="theme-toggle relative p-2 rounded-lg transition-colors hover:bg-gray-100 dark:hover:bg-zinc-800"
   aria-label="Toggle theme"
 >
   <!-- Sun icon -->
@@ -20,7 +19,6 @@
 
 <script>
   function initTheme() {
-    const toggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
 
     // Check saved preference or system preference
@@ -29,9 +27,12 @@
       html.classList.add('dark');
     }
 
-    toggle?.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    // Bind to ALL theme toggle buttons (desktop + mobile)
+    document.querySelectorAll('.theme-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+      });
     });
   }
 
