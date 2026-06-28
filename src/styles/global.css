@@ -57,11 +57,11 @@ html:not(.dark) .prose {
 .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; border-bottom: 1px solid var(--color-border-light); padding-bottom: 0.3rem; }
 .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; }
 
-html.dark .prose h1 { color: #fafafa; }
-html.dark .prose h2 { border-bottom-color: var(--color-border-dark); color: #fafafa; }
-html.dark .prose h3 { color: #fafafa; }
+html.dark .prose h1 { color: #e4e4e7; }
+html.dark .prose h2 { border-bottom-color: var(--color-border-dark); color: #e4e4e7; }
+html.dark .prose h3 { color: #e4e4e7; }
 html.dark .prose p { color: #d4d4d8; }
-html.dark .prose strong { color: #e4e4e7; }
+html.dark .prose strong { color: #d4d4d8; }
 html.dark .prose em { color: #d4d4d8; }
 
 .prose p { margin-bottom: 1.25rem; }
