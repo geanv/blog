@@ -8,7 +8,7 @@ export async function GET(context) {
 
   return rss({
     title: 'Guo Jian',
-    description: 'Guo Jian — Software Engineer & Researcher. Thoughts on cloud, networking, and code.',
+    description: 'Guo Jian — Technical Expert & Researcher. Thoughts on cloud, networking, and code.',
     site: context.site,
     items: sortedPosts.map((post) => ({
       title: post.data.title,
