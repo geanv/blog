@@ -59,8 +59,8 @@ const currentPath = Astro.url.pathname;
     </div>
   </nav>
 
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-200 dark:border-zinc-800 bg-white dark:bg-[#0a0a0b]">
+  <!-- Mobile menu (overlay) -->
+  <div id="mobile-menu" class="hidden sm:hidden absolute top-full left-0 right-0 border-t border-gray-200 dark:border-zinc-800 bg-white/95 dark:bg-[#0a0a0b]/95 backdrop-blur-xl shadow-lg dark:shadow-zinc-900/50">
     <div class="px-6 py-3 space-y-1">
       {navLinks.map(link => (
         <a
